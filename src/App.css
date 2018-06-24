@@ -1,4 +1,4 @@
-.App {
+/* .App {
   background-color: black;
   width: 100%;
   height: 150px;
@@ -20,8 +20,9 @@ li {
   text-align: center;
   border: 1px solid orange
 }
-li:hover{
+
+/* li:hover{
   color:wheat;
-  /* transform: scale(1.2);   */
+ transform: scale(1.2);   
   transition: 0.5s linear;
-}
+}  */

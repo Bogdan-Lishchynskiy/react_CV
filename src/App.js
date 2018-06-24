@@ -1,13 +1,12 @@
 import React, { Component, createContext } from 'react';
 // import React, { createContext } from "react";
 
-
+import ContactInfo from './components/contact-info/ContactInfo';
 import Main from './components/main/Main';
 import Skills from './components/skills/Skills';
 
 // import logo from './logo.svg';
 import './App.css';
-
 import content from './content';
 
 const LanguageContext = createContext();
@@ -36,6 +35,7 @@ class App extends Component {
                       {content.btnUkrLabel}
                     </button>
                   </div>
+                  <ContactInfo listItems={content.contactInfo} title={content.contactTitle} />
                   <Main container={content.main} title={content.mainTitle} />
                   <Skills title={content.skills}/>
                 </div>

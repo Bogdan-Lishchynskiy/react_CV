@@ -2,6 +2,12 @@ const content = {
     en: {
       btnUkrLabel: "ukr",
       btnEnLabel: "en",
+      contactTitle:"Contact Info",
+      contactInfo: `
+      Email Address: Lishchynskiy91@gmail.com
+      Cell: +380638619926
+      Skype: bogdan.lishchynskiy1
+      LinkedIn: linkedin.com/in/bogdan-lishchynskiy-30335a138/`,
       mainTitle: "Summary of Qualifications",
       main: `I am a front-end trainee web-developer with 6-month experience in web applications in non
       official projects. Fourth month ago, finished Soft-Serve IT academy courses by two directions.
@@ -18,6 +24,12 @@ const content = {
     ukr: {
       btnUkrLabel: "укр",
       btnEnLabel: "англ",
+      contactTitle:"Контактна інформація",
+      contactInfo: `
+      Адреса електронної пошти: Lishchynskiy91@gmail.com
+      Стільниковий: +380638619926
+      Скайп: bogdan.lishchynskiy1
+      ЛінкедІн: linkedin.com/in/bogdan-lishchynskiy-30335a138/`,
       mainTitle: "Короткий зміст кваліфікацій",
       main: `Я веб-розробник інтернету-стажиста, який має 6-місячний досвід роботи в веб-програмах, що не входять до складу програми
       офіційні проекти. Четвертий місяць тому закінчила курси Soft-Serve IT Academy за двома напрямками.
@@ -29,7 +41,7 @@ const content = {
       Я колективний гравець з сильною самомотивацією та хорошими навичками спілкування, я люблю вчитися
       нові технології та вирішення цікавих завдань. Мені дуже подобається моя робота і завжди відчуваю себе відповідальною
       за результат і хочемо робити щонайкраще кожного разу.`,
-      skills: "Скили"
+      skills: "Навички"
     }
   };
 

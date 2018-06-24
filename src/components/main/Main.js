@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-// import ReactDOM from "react-dom";
-
-
- import './Main.css';
+import './Main.css';
 
 
 class Main extends Component {

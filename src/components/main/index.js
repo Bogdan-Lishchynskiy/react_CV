@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import './Main.css';
-
 
 class Main extends Component {
   render() {
+    const { content } = this.props;
     return (
       <div className="Main">
         <header className="Main-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <h1 className="Main-info">{this.props.title}</h1>
+          <h1 className="Main-info">{content.mainTitle}</h1>
         </header>
         
-        <p className="Content">{this.props.container}</p>
+        <p className="Content">{content.main}</p>
       </div>
     );
   }

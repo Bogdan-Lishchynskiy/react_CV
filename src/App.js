@@ -1,43 +1,45 @@
-import React, { Component, createContext } from 'react';
-// import React, { createContext } from "react";
+import React, { Component, createContext } from "react";
+import styled from 'styled-components';
+import ContactInfo from "./components/contact-info";
+import Main from "./components/main";
+import Skills from "./components/skills";
+import LangSwitcher from "./components/lang-switcher";
 
-import ContactInfo from './components/contact-info/ContactInfo';
-import Main from './components/main/Main';
-import Skills from './components/skills/Skills';
+import content from "./content";
+import avatar from "./img/avatar.jpg";
 
-// import logo from './logo.svg';
-import './App.css';
-import content from './content';
+const Img = styled.img`
+float:right;  
+`;
 
 const LanguageContext = createContext();
-
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      language: "en"
+      defaultLanguage: "en"
     };
   }
+
+  switchLang = (language) => {
+    this.setState({ defaultLanguage: language });
+  }
+
   render() {
     return (
-      <LanguageContext.Provider value={content[this.state.language]}>
+      <LanguageContext.Provider value={content[this.state.defaultLanguage]}>
         <div>
           <LanguageContext.Consumer>
             {content => {
               return (
-                <div>
-                  <div>
-                    <button onClick={() => this.setState({ language: "en" })}>
-                      {content.btnEnLabel}
-                    </button>
-                    <button onClick={() => this.setState({ language: "ukr" })}>
-                      {content.btnUkrLabel}
-                    </button>
-                  </div>
-                  <ContactInfo listItems={content.contactInfo} title={content.contactTitle} />
-                  <Main container={content.main} title={content.mainTitle} />
-                  <Skills title={content.skills}/>
+                <div className="wrapper">
+                  <Img src={avatar} />
+                  <LangSwitcher content={content} 
+                    switchLang={this.switchLang}/>
+                  <ContactInfo content={content}/>
+                  <Main content={content} />
+                  <Skills content={content} />
                 </div>
               );
             }}
@@ -46,14 +48,6 @@ class App extends Component {
       </LanguageContext.Provider>
     );
   }
-  // render() {
-  //   return (
-  //     <div className="App">
-  //       <Main />
-  //       <Skills />
-  //     </div>
-  //   );
-  // }
 }
 
 export default App;
